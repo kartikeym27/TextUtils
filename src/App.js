@@ -5,7 +5,7 @@ import About from "./components/About";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light"); // Whether dark mode is enabled or not
@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar
           title="TextUtils"
           aboutText="About Us"
@@ -63,7 +63,7 @@ function App() {
             />
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
