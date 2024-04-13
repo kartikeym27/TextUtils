@@ -4,7 +4,7 @@ import TextForm from "./components/TextForm";
 import About from "./components/About";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
-
+import { ToastContainer } from "react-toastify";
 import { HashRouter, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -40,6 +40,11 @@ function App() {
   return (
     <>
       <HashRouter>
+      <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar
+        />
         <Navbar
           title="TextUtils"
           aboutText="About Us"
